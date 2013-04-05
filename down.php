@@ -8,7 +8,7 @@ else
 {
 $wangzhi="http://pan.baidu.com/share/link?".$canshu;
 $file=file_get_contents($wangzhi);
-$pattern='/a><a class="dbtn cancel singledbtn" href=(.*?)id="downFileButtom">/i';
+$pattern='/a><a class="new-dbtn" href=(.*?)id="downFileButtom">/i';
 preg_match_all($pattern,$file,$result);	
 $tempurl=implode("",$result[1]);
 $fileurlt=str_replace("\"","",$tempurl);
